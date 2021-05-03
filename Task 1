@@ -1,0 +1,13 @@
+#$$A = \left\{\begin{array}\\6x + 9y \\ 7x + 11y\end{array}\right. $$
+import numpy as np
+
+Vectors  = np.array([
+      [6, 9],
+      [7, 11]
+])
+
+plt.xlim(0,15)
+plt.ylim(0,15)
+plt.quiver([0,0],[0,0], Vectors[:,0], Vectors[:,1], angles='xy', scale_units='xy',scale=1, color=['green','violet'])
+
+plt.show()
