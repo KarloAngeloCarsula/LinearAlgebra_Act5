@@ -1,0 +1,18 @@
+#$$A = \left\{\begin{array}\\1x + 4y + 7z \\ 1x + 5y + 2\\ 8x + 2y + 4z\end{array}\right. $$
+Vectors = np.array([
+    [1,4,7],
+    [1,5,2],
+    [8,2,4]
+])
+
+Plot = plt.figure()
+V1 = Plot.gca(projection='3d')
+
+origin = (0,0,0)
+
+V1.set_xlim([0, 10])
+V1.set_ylim([0, 10])
+V1.set_zlim([0, 10])
+V1.quiver(origin, origin, origin, Vectors[:,0], Vectors[:,1], Vectors[:,2], arrow_length_ratio=0.05, colors=['teal','navy','purple'])
+
+plt.show()
